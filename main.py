@@ -1,0 +1,1 @@
+exec(open("./Lab5a_Act2.py").read())
