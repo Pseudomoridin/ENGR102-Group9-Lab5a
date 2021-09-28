@@ -1,5 +1,5 @@
-# Calculating High Blood Cholesterol Risk
-## *No clue why*
+# Calculating High Blood Cholesterol Heart Attack Risk
+## *No clue why though*
 
 1. Get inputs- char gender, int age, boolean smoke, int cholesterol, int hdl, int bp, boolean medicated
 2. Change lists containing modifiers based on gender, similarly to age
