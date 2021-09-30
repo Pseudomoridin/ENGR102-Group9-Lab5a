@@ -46,7 +46,7 @@ reference = [ # I'm gonna be honest this is probably the worst way to do this bu
         14:"16",
         15:"20",
         16:"25",
-        100:"30",
+        100:">30",
       }
     ]
   ],

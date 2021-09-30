@@ -29,7 +29,7 @@ else:
   agegroup = 4
 
 smoker = str(input("Do you smoke cigarettes (Y/N)? "))
-if smoker == "Y":
+if smoker in ["Y","y"]:
   smoker = True
 else:
   smoker = False
@@ -37,12 +37,12 @@ cholesterol = int(input("Enter your total cholesterol (mg/dL): "))
 hdl = int(input("Enter your HDL cholesterol (mg/dL): "))
 bp = int(input("Enter your systolic BP (mmHg): "))
 medicated = str(input("Are you taking blood pressure medication (Y/N)? "))
-if medicated == "Y":
+if medicated in ["Y","y"]:
   medicated = True
 else:
   medicated = False
 
-if gender == "M":
+if gender in ["M","m"]:
   reference = r[0]
 else:
   reference = r[1]
@@ -80,6 +80,7 @@ elif age < 75:
   score += reference[0][0][8]
 else:
   score += reference[0][0][9]
+#print(score)
 
 # Cholesterol
 if cholesterol < 160:
@@ -92,20 +93,23 @@ elif cholesterol < 280:
   score += reference[0][1][3]
 else:
   score += reference[0][1][4]
+#print(score)
 
 # Smoking
 if smoker:
   score += reference[0][2][1]
+#print(score)
 
 # HDL
-if hdl > 60:
+if hdl >= 60:
   score += reference[0][3][0]
-elif hdl > 50:
+elif hdl >= 50:
   score += reference[0][3][1]
-elif hdl > 40:
+elif hdl >= 40:
   score += reference[0][3][2]
 else: 
   score += reference[0][3][3]
+#print(score)
 
 # Blood Pressure
 if bp < 120:
@@ -118,6 +122,7 @@ elif bp < 160:
   score += reference[0][4][3]
 else:
   score += reference[0][4][4]
+#print(score)
 
 key_list = list(reference[0][5].keys())
 key_list.sort()
