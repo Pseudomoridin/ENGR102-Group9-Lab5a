@@ -119,8 +119,12 @@ elif bp < 160:
 else:
   score += reference[0][4][4]
 
+key_list = list(reference[0][5].keys())
+key_list.sort()
+#print(key_list)
+#print(score)
 # Percent calculation
-for key in reference[0][5].keys():
-  if score < key:
-    print("Your 10-year risk of a heart attack is {}%".format(reference[0][5][key]))
+for x in range(len(key_list)):
+  if score <= key_list[x]:
+    print("Your 10-year risk of a heart attack is {}%".format(reference[0][5][key_list[x]]))
     break
